@@ -26,8 +26,8 @@ export default function Home() {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className={`bg-white bg-opacity-10 p-6 rounded-lg shadow-lg backdrop-blur-md col-span-${card.colSpan} row-span-${card.rowSpan} col-start-${card.colStart} row-start-${card.rowStart}`}
           >
-            <h3 className="text-2xl font-bold mb-4">{card.title}</h3>
-            <p className="text-lg">{card.content}</p>
+            <h3 className="text-2xl font-bold mb-4 text-black dark:text-white">{card.title}</h3>
+            <p className="text-lg text-black dark:text-white">{card.content}</p>
           </motion.div>
         ))}
       </motion.div>

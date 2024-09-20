@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { DockDemo } from "@/components/Dock";
-import ThemeWrapper from "@/components/ThemeWrapper";
+import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,13 +14,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <body>
-        <ThemeWrapper>
-          {children}
-          <DockDemo />
-        </ThemeWrapper>
-      </body>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+            <DockDemo />
+          </ThemeProvider>
+        </body>
     </html>
   );
 }

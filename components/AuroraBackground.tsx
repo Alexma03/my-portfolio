@@ -16,7 +16,7 @@ export function AuroraBackgroundDemo() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative grid gap-10 py-10 px-10 max-w-full mx-auto h-[100vh] w-full grid-cols-12 grid-rows-12"
+        className="relative grid gap-6 py-32 px-10 max-w-full mx-auto h-[100vh] w-full grid-cols-12 grid-rows-12"
       >
         {cards.map((card, index) => (
           <motion.div

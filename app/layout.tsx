@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { AuroraBackgroundDemo } from "../components/AuroraBackground";
+import { DockDemo } from "@/components/Dock";
+import ThemeWrapper from "@/components/ThemeWrapper";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +16,10 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body>
-        <AuroraBackgroundDemo />
-        {children}
+        <ThemeWrapper>
+          {children}
+          <DockDemo />
+        </ThemeWrapper>
       </body>
     </html>
   );

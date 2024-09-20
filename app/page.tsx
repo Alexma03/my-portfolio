@@ -24,10 +24,30 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className={`bg-white bg-opacity-10 p-6 rounded-lg shadow-lg backdrop-blur-md col-span-${card.colSpan} row-span-${card.rowSpan} col-start-${card.colStart} row-start-${card.rowStart}`}
+            className={`bg-white bg-opacity-10 rounded-lg shadow-lg backdrop-blur-md col-span-${
+              card.colSpan
+            } row-span-${card.rowSpan} col-start-${card.colStart} row-start-${
+              card.rowStart
+            } ${card.title || card.content ? "p-6" : ""}`}
           >
-            <h3 className="text-2xl font-bold mb-4 text-black dark:text-white">{card.title}</h3>
-            <p className="text-lg text-black dark:text-white">{card.content}</p>
+            {card.component ? (
+              <card.component /> // Renderiza el componente aquí
+            ) : card.title || card.content ? (
+              <>
+                <h3 className="text-2xl font-bold mb-4 text-black dark:text-white">
+                  {card.title}
+                </h3>
+                <p className="text-lg text-black dark:text-white">
+                  {card.content}
+                </p>
+              </>
+            ) : card.image ? (
+              <img
+                src={card.image}
+                alt={card.title || "Card image"}
+                className="object-cover w-full h-full rounded-lg"
+              />
+            ) : null}
           </motion.div>
         ))}
       </motion.div>

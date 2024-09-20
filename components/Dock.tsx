@@ -12,7 +12,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Dock, DockIcon } from "@/components/magicui/dock";
-import { ModeToggle } from "@/components/mode-toggle";
+import { ModeToggle } from "@/components/ui/mode-toggle";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 

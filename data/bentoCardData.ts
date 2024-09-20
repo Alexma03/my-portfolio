@@ -1,4 +1,5 @@
 import { IconCloudHero } from "@/components/IconCloud";
+import WorkExperienceTimeline from "@/components/WorkTimeline";
 
 export interface Card {
   id: number;
@@ -18,7 +19,7 @@ export const cards: Card[] = [
     title: "Alejandro Marcos",
     content: "Ingeniero de Software",
     colSpan: 4,
-    rowSpan: 3,
+    rowSpan: 2,
     colStart: 1,
     rowStart: 1,
   },
@@ -40,12 +41,11 @@ export const cards: Card[] = [
   },
   {
     id: 4,
-    title: "Card 4",
-    content: "Content 4",
+    component: WorkExperienceTimeline,
     colSpan: 4,
-    rowSpan: 5,
+    rowSpan: 6,
     colStart: 1,
-    rowStart: 4,
+    rowStart: 3,
   },
   {
     id: 5,
@@ -58,10 +58,10 @@ export const cards: Card[] = [
   },
   {
     id: 6,
-    title: "6",
-    content: "",
-    colSpan: 1,
-    rowSpan: 2,
+    title: "Card 6",
+    content: "Content 6",
+    colSpan: 8,
+    rowSpan: 4,
     colStart: 1,
     rowStart: 9,
   },
@@ -69,26 +69,9 @@ export const cards: Card[] = [
     id: 7,
     title: "Card 7",
     content: "Content 7",
-    colSpan: 7,
-    rowSpan: 4,
-    colStart: 2,
-    rowStart: 9,
-  },
-  {
-    id: 8,
-    title: "Card 8",
-    content: "Content 8",
     colSpan: 4,
     rowSpan: 3,
     colStart: 9,
     rowStart: 10,
-  },
-  {
-    id: 9,
-    title: "9",
-    colSpan: 1,
-    rowSpan: 2,
-    colStart: 1,
-    rowStart: 11,
-  },
+  }
 ];

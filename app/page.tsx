@@ -16,7 +16,7 @@ export default function Home() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative grid gap-6 py-32 px-10 max-w-full mx-auto h-[100vh] w-full grid-cols-12 grid-rows-12"
+        className="relative grid gap-6 py-32 px-10 max-w-[1600px] mx-auto h-[100vh] w-full grid-cols-12 grid-rows-12 xl:py-10 lg:py-24 2xl:py-32 2xl:gap-8"
       >
         {cards.map((card, index) => (
           <motion.div

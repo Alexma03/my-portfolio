@@ -19,7 +19,7 @@ const config = {
     { pattern: /row-start-\d+/ },
     {
       pattern: /^(col|row)-(span|start)-\d+$/,
-      variants: ["xl"],
+      variants: ["xl", "md"],
     },
   ],
   prefix: "",

@@ -18,24 +18,24 @@ interface WorkExperienceItem {
 
 const workExperienceItems: WorkExperienceItem[] = [
   {
-    company: "Tech Solutions Inc.",
-    position: "Senior Software Developer",
-    location: "Barcelona, España",
-    startDate: "2020-01",
+    company: "Santander Digital Services",
+    position: "Ingeniero de Software Analista I",
+    location: "Madrid, España",
+    startDate: "2024-07",
     endDate: null,
-    technologies: ["React", "Node.js", "TypeScript", "AWS"],
-    logo: "/placeholder.svg?height=50&width=50",
+    technologies: ["Spring Boot", "Java", "SQL", "Github"],
+    logo: "/images/santander.png",
     description:
       "Lideré el desarrollo de aplicaciones web escalables y participé en la arquitectura de microservicios.",
   },
   {
-    company: "Innovate Systems",
+    company: "Carrefour Tech",
     position: "Full Stack Developer",
     location: "Madrid, España",
-    startDate: "2018-03",
-    endDate: "2019-12",
-    technologies: ["Angular", "Python", "Django", "PostgreSQL"],
-    logo: "/placeholder.svg?height=50&width=50",
+    startDate: "2023-07",
+    endDate: "2024-07",
+    technologies: ["Spring Boot", "Angular", "MongoDB", "PostgreSQL"],
+    logo: "/images/carrefour.png",
     description:
       "Desarrollé y mantuve aplicaciones web full-stack para clientes en diversos sectores.",
   },
@@ -77,7 +77,7 @@ export default function WorkExperienceTimeline() {
                 <img
                   src={item.logo}
                   alt={item.company}
-                  className="w-8 h-8 mr-2"
+                  className="w-16 h-10 mr-2"
                 />
                 <h3 className="text-lg font-semibold">{item.company}</h3>
               </div>

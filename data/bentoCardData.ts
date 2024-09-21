@@ -8,8 +8,12 @@ export interface Card {
   image?: string;
   colSpan: number;
   rowSpan: number;
+  mdrowSpan: number;
+  mdcolSpan: number;
   colStart: number;
   rowStart: number;
+  mdcolStart?: number;
+  mdrowStart?: number;
   component?: React.ComponentType<any>;
 }
 
@@ -20,6 +24,10 @@ export const cards: Card[] = [
     content: "Ingeniero de Software",
     colSpan: 4,
     rowSpan: 2,
+    mdrowSpan: 1,
+    mdcolSpan: 1,
+    mdcolStart: 1,
+    mdrowStart: 1,
     colStart: 1,
     rowStart: 1,
   },
@@ -28,6 +36,10 @@ export const cards: Card[] = [
     image: "/images/alejandro-marcos.jpg",
     colSpan: 4,
     rowSpan: 8,
+    mdrowSpan: 5,
+    mdcolSpan: 1,
+    mdcolStart: 2,
+    mdrowStart: 1,
     colStart: 5,
     rowStart: 1,
   },
@@ -36,6 +48,10 @@ export const cards: Card[] = [
     component: IconCloudHero,
     colSpan: 4,
     rowSpan: 6,
+    mdrowSpan: 4,
+    mdcolSpan: 1,
+    mdcolStart: 1,
+    mdrowStart: 2,
     colStart: 9,
     rowStart: 1,
   },
@@ -44,6 +60,10 @@ export const cards: Card[] = [
     component: WorkExperienceTimeline,
     colSpan: 4,
     rowSpan: 6,
+    mdrowSpan: 4,
+    mdcolSpan: 2,
+    mdcolStart: 1,
+    mdrowStart: 6,
     colStart: 1,
     rowStart: 3,
   },
@@ -53,6 +73,10 @@ export const cards: Card[] = [
     content: "Content 5",
     colSpan: 4,
     rowSpan: 3,
+    mdrowSpan: 1,
+    mdcolSpan: 1,
+    mdcolStart: 1,
+    mdrowStart: 10,
     colStart: 9,
     rowStart: 7,
   },
@@ -62,6 +86,10 @@ export const cards: Card[] = [
     content: "Content 6",
     colSpan: 8,
     rowSpan: 4,
+    mdrowSpan: 1,
+    mdcolSpan: 1,
+    mdcolStart: 2,
+    mdrowStart: 10,
     colStart: 1,
     rowStart: 9,
   },
@@ -71,6 +99,10 @@ export const cards: Card[] = [
     content: "Content 7",
     colSpan: 4,
     rowSpan: 3,
+    mdrowSpan: 2,
+    mdcolSpan: 2,
+    mdcolStart: 1,
+    mdrowStart: 18,
     colStart: 9,
     rowStart: 10,
   }

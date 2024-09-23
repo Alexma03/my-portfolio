@@ -1,3 +1,4 @@
+import EducationTimeline from "@/components/EducationTimeline";
 import { IconCloudHero } from "@/components/IconCloud";
 import WorkExperienceTimeline from "@/components/WorkTimeline";
 
@@ -82,8 +83,7 @@ export const cards: Card[] = [
   },
   {
     id: 6,
-    title: "Card 6",
-    content: "Content 6",
+    component: EducationTimeline,
     colSpan: 8,
     rowSpan: 4,
     mdRowSpan: 1,

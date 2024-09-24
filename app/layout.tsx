@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { DockDemo } from "@/components/Dock";
-import { ThemeProvider } from "@/components/ui/theme-provider"
+import { ThemeProvider } from "@/components/ui/theme-provider";
+import { ThemeModeScript } from "flowbite-react";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,17 +16,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
+      <head>
+        <ThemeModeScript />
+      </head>
       <body>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-            <DockDemo />
-          </ThemeProvider>
-        </body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <DockDemo />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

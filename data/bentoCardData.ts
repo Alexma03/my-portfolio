@@ -1,4 +1,4 @@
-import EducationTimeline from "@/components/EducationTimeline";
+import StudiesTimeline from "@/components/StudiesTimeline";
 import { IconCloudHero } from "@/components/IconCloud";
 import WorkExperienceTimeline from "@/components/WorkTimeline";
 
@@ -83,7 +83,7 @@ export const cards: Card[] = [
   },
   {
     id: 6,
-    component: EducationTimeline,
+    component: StudiesTimeline,
     colSpan: 8,
     rowSpan: 4,
     mdRowSpan: 1,

@@ -19,7 +19,7 @@ export default function Home() {
           }}
           className="
             relative grid gap-6 py-8 px-16 max-w-[2000px] xl:max-h-[1150px] mx-auto w-full sm:px-32
-            grid-cols-1 md:grid-cols-2 md:grid-rows-20 lg:px-28 xl:grid-cols-12 xl:grid-rows-12
+            grid-cols-1 sm:grid-cols-1 md:grid-cols-2 md:grid-rows-20 lg:px-28 xl:grid-cols-12 xl:grid-rows-12
             xl:py-10 xl:px-10 xl:h-[100vh] 2xl:p-16 2xl:gap-8 border-none
           "
         >
@@ -33,7 +33,11 @@ export default function Home() {
                 card.component ? "" : "bg-white bg-opacity-10"
               } rounded-lg shadow-lg backdrop-blur-md text-center flex items-center justify-center ${
                 card.title || card.content ? "py-4 px-10" : ""
-              } col-span-1 md:col-span-${card.mdColSpan} md:row-span-${
+              } col-span-1 sm:col-span-${card.smColSpan} sm:row-span-${
+                card.smRowSpan
+              } sm:col-start-${card.smColStart} sm:row-start-${
+                card.smRowStart
+              } md:col-span-${card.mdColSpan} md:row-span-${
                 card.mdRowSpan
               } md:col-start-${card.mdColStart} md:row-start-${
                 card.mdRowStart

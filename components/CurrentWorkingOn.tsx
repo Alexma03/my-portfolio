@@ -5,7 +5,7 @@ import { ExternalLink } from "lucide-react";
 import { projectData } from "@/data/currentWorkingOnData";
 
 export default function CurrentWorkingOn() {
-  const { title, description, imageUrl, technologies = [], projectUrl } = projectData;
+  const { title, description, imageUrl, technologies = [] } = projectData;
 
   return (
     <Card className="overflow-hidden h-full w-full bg-white bg-opacity-10">

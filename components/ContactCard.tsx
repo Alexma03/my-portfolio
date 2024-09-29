@@ -19,7 +19,7 @@ export default function ContactCard() {
               </p>
             </div>
           </div>
-          <div className="flex w-full max-w-sm items-center space-x-2">
+          <div className="flex flex-col gap-4 sm:flex-row w-full max-w-sm items-center">
             <Input type="email" placeholder="Email" />
             <Button size="sm" className="whitespace-nowrap">
               Enviar mensaje

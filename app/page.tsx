@@ -31,37 +31,22 @@ export default function Home() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`${
                 card.component ? "" : "bg-white bg-opacity-10"
-              } rounded-lg shadow-lg backdrop-blur-md text-center flex items-center justify-center ${
-                card.title || card.content ? "py-4 px-10" : ""
-              } col-span-1 sm:col-span-${card.smColSpan} sm:row-span-${
-                card.smRowSpan
-              } sm:col-start-${card.smColStart} sm:row-start-${
-                card.smRowStart
-              } md:col-span-${card.mdColSpan} md:row-span-${
-                card.mdRowSpan
-              } md:col-start-${card.mdColStart} md:row-start-${
-                card.mdRowStart
-              } xl:col-span-${card.colSpan} xl:row-span-${
-                card.rowSpan
-              } xl:col-start-${card.colStart} xl:row-start-${
-                card.rowStart
-              } border-none`}
+              } shadow-2xl rounded-lg backdrop-blur-md text-center flex items-center justify-center  md:col-span-${
+                card.mdColSpan
+              } md:row-span-${card.mdRowSpan} md:col-start-${
+                card.mdColStart
+              } md:row-start-${card.mdRowStart} xl:col-span-${
+                card.colSpan
+              } xl:row-span-${card.rowSpan} xl:col-start-${
+                card.colStart
+              } xl:row-start-${card.rowStart} border-none`}
             >
               {card.component ? (
                 <card.component />
-              ) : card.title || card.content ? (
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold mb-4 text-black dark:text-white">
-                    {card.title}
-                  </h3>
-                  <p className="text-lg text-black dark:text-white">
-                    {card.content}
-                  </p>
-                </div>
               ) : card.image ? (
                 <img
                   src={card.image}
-                  alt={card.title || "Card image"}
+                  alt={"Card image"}
                   className="object-cover w-full h-full rounded-lg"
                 />
               ) : null}

@@ -7,8 +7,6 @@ import ContactCard from "@/components/ContactCard";
 
 export interface Card {
   id: number;
-  title?: string;
-  content?: string;
   image?: string;
   colSpan: number;
   rowSpan: number;
@@ -18,10 +16,6 @@ export interface Card {
   rowStart: number;
   mdColStart?: number;
   mdRowStart?: number;
-  smRowStart?: number;
-  smColStart?: number;
-  smRowSpan?: number;
-  smColSpan?: number;
   component?: React.ComponentType<any>;
 }
 
@@ -37,8 +31,6 @@ export const cards: Card[] = [
     mdRowStart: 1,
     colStart: 1,
     rowStart: 1,
-    smRowStart: 1,
-    smRowSpan: 2,
   },
   {
     id: 2,
@@ -51,8 +43,6 @@ export const cards: Card[] = [
     mdRowStart: 1,
     colStart: 5,
     rowStart: 1,
-    smRowStart: 3,
-    smRowSpan: 8,
   },
   {
     id: 3,
@@ -65,8 +55,6 @@ export const cards: Card[] = [
     mdRowStart: 2,
     colStart: 9,
     rowStart: 1,
-    smRowStart: 11,
-    smRowSpan: 6,
   },
   {
     id: 4,
@@ -79,8 +67,6 @@ export const cards: Card[] = [
     mdRowStart: 3,
     colStart: 1,
     rowStart: 3,
-    smRowStart: 17,
-    smRowSpan: 6,
   },
   {
     id: 5,
@@ -93,8 +79,6 @@ export const cards: Card[] = [
     mdRowStart: 3,
     colStart: 9,
     rowStart: 7,
-    smRowStart: 23,
-    smRowSpan: 3,
   },
   {
     id: 6,
@@ -107,8 +91,6 @@ export const cards: Card[] = [
     mdRowStart: 4,
     colStart: 1,
     rowStart: 9,
-    smRowStart: 26,
-    smRowSpan: 4,
   },
   {
     id: 7,
@@ -121,7 +103,5 @@ export const cards: Card[] = [
     mdRowStart: 5,
     colStart: 9,
     rowStart: 10,
-    smRowStart: 30,
-    smRowSpan: 3,
   }
 ];

@@ -24,6 +24,8 @@ export function DockDemo() {
                 <LinkPreview
                   url={item.href}
                   aria-label={item.label}
+                  imageSrc={item.imgSource}
+                  isStatic
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
                     "size-12 rounded-full"

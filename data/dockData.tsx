@@ -50,6 +50,7 @@ const Icons = {
 export interface NavbarItem {
   href: string;
   icon: React.ForwardRefExoticComponent<React.SVGProps<SVGSVGElement>>;
+  imgSource: string;
   label: string;
 }
 
@@ -66,15 +67,13 @@ export interface DockData {
     social: {
       GitHub: SocialItem;
       LinkedIn: SocialItem;
-      email: SocialItem;
     };
   };
 }
 
 export const dockDatas: DockData = {
   navbar: [
-    { href: "#", icon: HomeIcon, label: "Home" },
-    { href: "#", icon: PencilIcon, label: "Blog" },
+    { href: "#", icon: HomeIcon, label: "Home", imgSource: "/images/Portfolio-Landing.png" },
   ],
   contact: {
     social: {
@@ -89,13 +88,7 @@ export const dockDatas: DockData = {
         url: "https://www.linkedin.com/in/alejandro-marcos-garcia/",
         imgSource: "/images/Linkedin-Profile.png",
         icon: Icons.linkedin,
-      },
-      email: {
-        name: "Send Email",
-        url: "#",
-        imgSource: "/images/Email-Profile.png",
-        icon: Icons.email,
-      },
+      }
     },
   },
 };

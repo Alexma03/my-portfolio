@@ -2,6 +2,8 @@ import StudiesTimeline from "@/components/StudiesTimeline";
 import { IconCloudHero } from "@/components/IconCloud";
 import WorkExperienceTimeline from "@/components/WorkTimeline";
 import { NameCard } from "@/components/NameCard";
+import CurrentWorkingOn from "@/components/CurrentWorkingOn";
+import ContactCard from "@/components/ContactCard";
 
 export interface Card {
   id: number;
@@ -82,8 +84,7 @@ export const cards: Card[] = [
   },
   {
     id: 5,
-    title: "Card 5",
-    content: "Content 5",
+    component: CurrentWorkingOn,
     colSpan: 4,
     rowSpan: 3,
     mdRowSpan: 1,
@@ -111,8 +112,7 @@ export const cards: Card[] = [
   },
   {
     id: 7,
-    title: "Card 7",
-    content: "Content 7",
+    component: ContactCard,
     colSpan: 4,
     rowSpan: 3,
     mdRowSpan: 1,

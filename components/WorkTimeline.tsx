@@ -12,7 +12,7 @@ export default function WorkExperienceTimeline() {
                 <Timeline.Point className=""/>
                 <Timeline.Content className="flex flex-col justify-normal">
                   <div className="flex flex-row">
-                    <div className="flex justify-normal mb-4">
+                    <div className="flex justify-normal mb-4 filter drop-shadow-2xl">
                       <img
                         src={work.logo}
                         alt={work.company}

@@ -18,8 +18,8 @@ export default function Home() {
             ease: "easeInOut",
           }}
           className="
-            relative grid gap-6 py-8 px-16 max-w-[2000px] xl:max-h-[1150px] mx-auto w-full sm:px-32
-            grid-cols-1 sm:grid-cols-1 md:grid-cols-2 md:grid-rows-20 lg:px-28 xl:grid-cols-12 xl:grid-rows-12
+            relative grid gap-6 p-10 max-w-[2000px] xl:max-h-[1150px] mx-auto w-full
+            grid-cols-1 sm:grid-cols-1 md:grid-cols-2 md:grid-rows-20 lg:px-14 xl:grid-cols-12 xl:grid-rows-12
             xl:py-10 xl:px-10 xl:h-[100vh] 2xl:p-16 2xl:gap-8 border-none
           "
         >

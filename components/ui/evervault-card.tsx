@@ -116,13 +116,19 @@ export const generateRandomString = (length: number) => {
   return result;
 };
 
+interface IconProps {
+  className?: string;
+  size?: number;
+  color?: string;
+  // Agrega más propiedades específicas según sea necesario
+}
+
 export const Icon = ({
   className,
+  size,
+  color,
   ...rest
-}: {
-  className?: string;
-  [key: string]: any;
-}) => {
+}: IconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

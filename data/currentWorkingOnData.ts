@@ -1,9 +1,9 @@
 export class ProjectCardData {
-  title?: string;
-  description?: string;
-  imageUrl?: string;
-  technologies?: string[];
-  projectUrl?: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  technologies: string[];
+  projectUrl: string;
 
   constructor(
     title: string = "Mi Portafolio",

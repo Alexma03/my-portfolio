@@ -1,6 +1,7 @@
 import { Timeline, Badge } from "flowbite-react";
 import { studies } from "@/data/studiesTimelineData";
 import useWindowSize from "@/hooks/useWindowSize"; // Asegúrate de importar el hook correctamente
+import Image from "next/image";
 
 export default function StudiesTimeline() {
   const size = useWindowSize();
@@ -17,7 +18,7 @@ export default function StudiesTimeline() {
                 <Timeline.Content className="flex flex-col justify-normal">
                   <div className="flex flex-col">
                     <div className="flex justify-normal my-2">
-                      <img
+                      <Image
                         src={study.img}
                         alt={study.title}
                         className="h-8 object-contain"

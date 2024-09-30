@@ -6,8 +6,8 @@ export class ProjectCardData {
   projectUrl: string;
 
   constructor(
-    title: string = "Mi Portafolio",
-    description: string = "Trabajando en mi portafolio, con nuevas secciones y creando un apartado de blog",
+    title: string = "Mi Portfolio",
+    description: string = "Trabajando en mi portfolio, con nuevas secciones y creando un apartado de blog",
     imageUrl: string = "/images/Imagen-social-network.jpeg",
     technologies: string[] = ["React", "Next.js", "Tailwind CSS"],
     projectUrl: string = "#"

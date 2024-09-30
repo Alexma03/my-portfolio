@@ -15,7 +15,7 @@ export interface Study {
 export const studies: Study[] = [
   {
     id: 1,
-    title: "Desarrollo de Aplicaciones Multiplataforma Dual",
+    title: "Desarrollo de Aplicaciones Multiplataforma (Dual)",
     img: "/images/cesur.png",
     height: 50,
     width: 150,

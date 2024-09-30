@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
 import { projectData } from "@/data/currentWorkingOnData";
+import Image from "next/image";
 
 export default function CurrentWorkingOn() {
   const { title, description, imageUrl, technologies = [] } = projectData;
@@ -11,11 +12,13 @@ export default function CurrentWorkingOn() {
     <Card className="overflow-hidden h-full w-full bg-white bg-opacity-10">
       <CardContent className="p-0">
         <div className="flex flex-col xl:flex-row">
-          <div className="w-full xl:w-1/3">
-            <img
+          <div className="w-full xl:w-1/3 relative">
+            <Image
               alt={title}
-              className="object-cover w-full h-64 xl:h-full"
               src={imageUrl}
+              width={2048}
+              height={2048}
+              className="object-cover w-full h-64 xl:h-full"
               style={{
                 aspectRatio: "300/200",
                 objectFit: "cover",

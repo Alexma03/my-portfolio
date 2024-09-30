@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { cards } from "@/data/bentoCardData";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -44,7 +45,9 @@ export default function Home() {
               {card.component ? (
                 <card.component />
               ) : card.image ? (
-                <img
+                <Image
+                  width={1080}
+                  height={1440}
                   src={card.image}
                   alt={"Card image"}
                   className="object-cover w-full h-full rounded-lg"

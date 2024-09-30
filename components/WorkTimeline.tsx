@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function WorkExperienceTimeline() {
   return (
-    <div className="h-full w-full rounded-lg py-6 px-10 short-laptop:p-5 bg-white bg-opacity-10">
+    <div className="h-full w-full rounded-lg py-6 px-4 short-laptop:p-5 bg-white bg-opacity-10">
       <div className="flex flex-col gap-4 short-laptop:gap-2">
         {workExperienceItems.map((work, index) => (
           <div key={index}>

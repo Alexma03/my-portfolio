@@ -7,10 +7,13 @@ export default function StudiesTimeline() {
   const size = useWindowSize();
   const isHorizontal = (size.width ?? 0) > 768;
 
+  // Invertir el array si isHorizontal es verdadero
+  const displayedStudies = isHorizontal ? studies : [...studies].reverse();
+
   return (
     <div className="h-full w-full rounded-lg py-6 px-4 bg-white bg-opacity-10">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {studies.map((study) => (
+        {displayedStudies.map((study) => (
           <div key={study.id}>
             <Timeline horizontal={isHorizontal}>
               <Timeline.Item className="mb-0 md:ml-6">

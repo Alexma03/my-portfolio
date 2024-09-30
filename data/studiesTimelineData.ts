@@ -47,7 +47,7 @@ export const studies: Study[] = [
     height: 90,
     width: 90,
     institution: "Universidad Oberta de Catalunya",
-    year: "2024 - actualidad",
+    year: "2024 - Presente",
     type: "Carrera",
     completed: false,
     description:

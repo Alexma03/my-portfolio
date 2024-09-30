@@ -1,6 +1,5 @@
 import { Timeline, Badge } from "flowbite-react";
 import { workExperienceItems } from "@/data/workTimelineData";
-import Image from "next/image";
 
 export default function WorkExperienceTimeline() {
   return (
@@ -14,7 +13,7 @@ export default function WorkExperienceTimeline() {
                 <Timeline.Content className="flex flex-col justify-normal">
                   <div className="flex flex-row">
                     <div className="flex justify-normal mb-4 filter drop-shadow-2xl">
-                      <Image
+                      <img
                         src={work.logo}
                         alt={work.company}
                         className="h-8 object-contain"

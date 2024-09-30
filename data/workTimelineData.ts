@@ -6,6 +6,8 @@ export interface WorkExperienceItem {
     endDate: string | null;
     technologies: string[];
     logo: string;
+    height: number;
+    width: number;
     description: string;
   }
   
@@ -18,6 +20,8 @@ export interface WorkExperienceItem {
       endDate: null,
       technologies: ["Spring Boot", "Java", "SQL", "Github"],
       logo: "/images/santander.png",
+      height: 50,
+      width: 60,
       description:
         "Lideré el desarrollo de aplicaciones web escalables y participé en la arquitectura de microservicios.",
     },
@@ -29,6 +33,8 @@ export interface WorkExperienceItem {
       endDate: "Junio 2024",
       technologies: ["Spring Boot", "Angular", "MongoDB", "PostgreSQL"],
       logo: "/images/carrefour.png",
+      height: 50,
+      width: 65,
       description:
         "Desarrollé y mantuve aplicaciones web full-stack para clientes en diversos sectores.",
     },

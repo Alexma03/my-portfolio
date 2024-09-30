@@ -19,9 +19,9 @@ export default function Home() {
             ease: "easeInOut",
           }}
           className="
-            relative grid gap-6 p-10 max-w-[2000px] xl:max-h-[1150px] mx-auto w-full
+            relative grid gap-6 p-5 max-w-[2000px] xl:max-h-[1150px] mx-auto w-full
             grid-cols-1 sm:grid-cols-1 md:grid-cols-2 md:grid-rows-20 lg:px-14 xl:grid-cols-12 xl:grid-rows-12
-            xl:py-10 xl:px-10 xl:h-[100vh] 2xl:p-16 2xl:gap-8 border-none
+            xl:py-10 xl:px-10 xl:h-[100vh] 2xl:p-16 2xl:gap-8 border-none short-laptop:p-8
           "
         >
           {cards.map((card, index) => (
@@ -31,27 +31,27 @@ export default function Home() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`${
-                card.component ? "" : "bg-white bg-opacity-10"
-              } shadow-2xl rounded-lg backdrop-blur-md text-center flex items-center justify-center  md:col-span-${
-                card.mdColSpan
+              card.component ? "" : "bg-white bg-opacity-10"
+              } shadow-2xl rounded-lg backdrop-blur-md text-center flex items-center justify-center md:col-span-${
+              card.mdColSpan
               } md:row-span-${card.mdRowSpan} md:col-start-${
-                card.mdColStart
+              card.mdColStart
               } md:row-start-${card.mdRowStart} xl:col-span-${
-                card.colSpan
+              card.colSpan
               } xl:row-span-${card.rowSpan} xl:col-start-${
-                card.colStart
-              } xl:row-start-${card.rowStart} border-none`}
+              card.colStart
+              } xl:row-start-${card.rowStart} border-none flex items-center justify-center`}
             >
               {card.component ? (
-                <card.component />
+              <card.component />
               ) : card.image ? (
-                <Image
-                  width={1080}
-                  height={1440}
-                  src={card.image}
-                  alt={"Card image"}
-                  className="object-cover w-full h-full rounded-lg"
-                />
+              <Image
+                width={1080}
+                height={1440}
+                src={card.image}
+                alt={"Card image"}
+                className="object-cover w-full h-full rounded-lg"
+              />
               ) : null}
             </motion.div>
           ))}

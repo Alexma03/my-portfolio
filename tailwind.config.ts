@@ -112,6 +112,9 @@ const config = {
           "5": "hsl(var(--chart-5))",
         },
       },
+      screens: {
+        'short-laptop': { 'raw': '(min-width: 1279px) and (max-height: 1100px)' },
+      }
     },
   },
   plugins: [require("tailwindcss-animate"), addVariablesForColors, flowbite.plugin()],

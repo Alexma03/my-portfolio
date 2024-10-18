@@ -10,15 +10,15 @@ export default function CurrentWorkingOn() {
 
   return (
     <Card className="overflow-hidden h-full w-full bg-white bg-opacity-10">
-      <CardContent className="p-0">
-        <div className="flex flex-col xl:flex-row">
-          <div className="w-full xl:w-1/3 relative">
+      <CardContent className="p-0 h-full">
+        <div className="flex flex-col xl:flex-row h-full">
+          <div className="w-full xl:w-1/3 relative h-full">
             <Image
               alt={title}
               src={imageUrl}
               width={2048}
               height={2048}
-              className="object-cover w-full h-64 xl:h-full short-laptop:h-48"
+              className="object-cover w-full h-full"
               style={{
                 aspectRatio: "300/200",
                 objectFit: "cover",
@@ -28,8 +28,8 @@ export default function CurrentWorkingOn() {
               En progreso
             </Badge>
           </div>
-            <div className="flex flex-col justify-between p-6 w-full lg:w-2/3 short-laptop:py-3 short-laptop:px-8 short-laptop:justify-start">
-            <div className="text-start">
+          <div className="flex flex-col justify-between p-6 w-full lg:w-2/3 short-laptop:py-6 short-laptop:px-8 short-laptop:justify-start h-full">
+            <div className="text-start flex-grow">
               <h3 className="text-2xl font-bold mb-2 short-laptop:text-lg short-laptop:mb-1">{title}</h3>
               <p className="text-muted-foreground mb-4 dark:text-slate-300 text-slate-800 short-laptop:text-sm short-laptop:mb-2">
                 {description}

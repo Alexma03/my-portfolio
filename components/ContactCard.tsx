@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 export default function ContactCard() {
   return (
     <Card className="overflow-hidden h-full w-full">
-      <CardContent className="p-0">
+      <CardContent className="p-0 h-full">
         <div className="flex flex-col items-center align-middle h-full py-2 px-3 short-laptop:flex-row">
           <div className="flex flex-col items-center">
             <div className="p-2 m-1 bg-primary/10 rounded-full">
@@ -19,7 +19,7 @@ export default function ContactCard() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col m-2 gap-4 sm:gap-2 sm:flex-row w-full max-w-sm items-center short-laptop:flex-col">
+          <div className="flex flex-col m-2 gap-4 sm:gap-2 sm:flex-row w-full max-w-sm items-center short-laptop:flex-col short-laptop:gap-6">
             <Input type="email" placeholder="Email" />
             <Button size="sm" className="whitespace-nowrap">
               Enviar mensaje

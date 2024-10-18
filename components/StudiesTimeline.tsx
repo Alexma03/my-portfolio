@@ -26,7 +26,7 @@ export default function StudiesTimeline() {
                         alt={study.title}
                         height={study.height}
                         width={study.width}
-                        className="short-laptop:h-9" 
+                        className="" 
                       />
                     </div>
                     <Timeline.Time className="dark:text-slate-200 text-left pt-1 short-laptop:text-sm">

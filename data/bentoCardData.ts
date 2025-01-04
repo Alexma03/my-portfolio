@@ -34,7 +34,7 @@ export const cards: Card[] = [
   },
   {
     id: 2,
-    image: "/images/alejandro-marcos.jpg",
+    image: "/images/Foto-Perfil.jpg",
     colSpan: 4,
     rowSpan: 8,
     mdRowSpan: 2,

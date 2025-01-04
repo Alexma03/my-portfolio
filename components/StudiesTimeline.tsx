@@ -1,54 +1,48 @@
-import { Timeline, Badge } from "flowbite-react";
+import { Badge } from "flowbite-react";
 import { studies } from "@/data/studiesTimelineData";
-import useWindowSize from "@/hooks/useWindowSize"; // Asegúrate de importar el hook correctamente
 import Image from "next/image";
 
 export default function StudiesTimeline() {
-  const size = useWindowSize();
-  const isHorizontal = (size.width ?? 0) > 768;
-
-  // Invertir el array si isHorizontal es verdadero
-  const displayedStudies = isHorizontal ? studies : [...studies].reverse();
-
   return (
-    <div className="h-full w-full rounded-lg py-6 px-4 bg-white bg-opacity-10">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {displayedStudies.map((study) => (
-          <div key={study.id}>
-            <Timeline horizontal={isHorizontal}>
-              <Timeline.Item className="mb-0 md:ml-6">
-                <Timeline.Point />
-                <Timeline.Content className="flex flex-col justify-normal">
-                  <div className="flex flex-col">
-                    <div className="flex justify-normal my-2 short-laptop:my-1">
-                      <Image
-                        src={study.img}
-                        alt={study.title}
-                        height={study.height}
-                        width={study.width}
-                        className="" 
-                      />
-                    </div>
-                    <Timeline.Time className="dark:text-slate-200 text-left pt-1 short-laptop:text-sm">
-                      {study.year}
-                    </Timeline.Time>
-                    <Timeline.Title className="text-left short-laptop:text-sm">
-                      {study.title}
-                    </Timeline.Title>
+    <div className="h-full w-full rounded-lg px-6 py-8 sm:px-10 sm:py-12 bg-white bg-opacity-10 flex items-center justify-center">
+      <div className="flex flex-col sm:flex-row items-center gap-6 xl:justify-between lg:justify-center md:justify-center max-w-6xl w-full h-full">
+        {studies.map((study) => (
+          <div key={study.id} className="w-full">
+            <div className="flex flex-col justify-normal">
+              <div className="flex flex-row mb-4 items-center justify-center">
+                  <div className="relative w-full">
+                    <Image
+                      src={study.img}
+                      alt={study.title}
+                      width={study.width}
+                      height={study.height}
+                      className="object-contain rounded-md filter drop-shadow-xl" 
+                    />
                   </div>
-                  <Timeline.Body className="text-left pb-1 short-laptop:text-xs">
-                    <p>{study.institution}</p>
-                    <div className="flex flex-wrap gap-2 mt-2">
-                      {study.skills.map((skill, index) => (
-                        <Badge key={index} color="info" className="short-laptop:text-xs">
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </Timeline.Body>
-                </Timeline.Content>
-              </Timeline.Item>
-            </Timeline>
+              </div>
+              <h3 className="text-left text-lg md:text-2xl lg:text-2xl xl:text-xl text-gray-900 dark:text-white font-medium">
+                {study.title}
+              </h3>
+              <span className="dark:text-slate-200 mt-2 text-left text-xs md:text-base lg:text-base xl:text-sm">
+                {study.year}
+              </span>
+              <div className="text-left">
+                <p className="py-1 font-semibold text-base text-gray-700 dark:text-gray-300">
+                  {study.institution}
+                </p>
+                <div className="flex flex-wrap gap-1.5 mt-2">
+                  {study.skills.map((skill, index) => (
+                    <Badge
+                      key={index}
+                      color="gray"
+                      className="text-xs md:text-sm lg:text-sm xl:text-xs text-gray-700 dark:text-gray-200 dark:bg-gray-700" 
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         ))}
       </div>

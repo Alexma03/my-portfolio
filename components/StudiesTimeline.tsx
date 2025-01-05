@@ -20,14 +20,14 @@ export default function StudiesTimeline() {
                     />
                   </div>
               </div>
-              <h3 className="text-left text-lg md:text-2xl lg:text-2xl xl:text-xl text-gray-900 dark:text-white font-medium">
+              <h3 className="text-left text-lg md:text-2xl lg:text-2xl xl:text-xl short-laptop:text-base text-gray-900 dark:text-white font-medium">
                 {study.title}
               </h3>
-              <span className="dark:text-slate-200 mt-2 text-left text-xs md:text-base lg:text-base xl:text-sm">
+              <span className="dark:text-slate-200 mt-2 text-left text-xs md:text-base lg:text-base xl:text-sm short-laptop:text-xs">
                 {study.year}
               </span>
               <div className="text-left">
-                <p className="py-1 font-semibold text-base text-gray-700 dark:text-gray-300">
+                <p className="py-1 font-semibold text-base text-gray-700 dark:text-gray-300 short-laptop:text-sm">
                   {study.institution}
                 </p>
                 <div className="flex flex-wrap gap-1.5 mt-2">
@@ -35,7 +35,7 @@ export default function StudiesTimeline() {
                     <Badge
                       key={index}
                       color="gray"
-                      className="text-xs md:text-sm lg:text-sm xl:text-xs text-gray-700 dark:text-gray-200 dark:bg-gray-700" 
+                      className="text-xs md:text-sm lg:text-sm xl:text-xs short-laptop:text-[10px] text-gray-700 dark:text-gray-200 dark:bg-gray-700" 
                     >
                       {skill}
                     </Badge>

@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { IconCloudDemo } from "@/components/TecnologiesIconCloud";
 
 export default function Home() {
   return (
     <div className="flex flex-col w-full">
-      <section className="h-screen p-8">
-        <main className="grid grid-cols-6 gap-8 max-w-[1920px] w-full mx-auto h-full">
+      <main className="h-screen p-8">
+        <section className="grid grid-cols-6 gap-8 max-w-[1920px] w-full mx-auto h-full">
           <div
             className="rounded-2xl border-2 relative grid-flow-dense col-span-2 row-span-1 p-10 
             flex items-center justify-center"
@@ -33,16 +34,9 @@ export default function Home() {
           </div>
 
           <div
-            className="rounded-2xl border-2 relative grid-flow-dense col-span-2 row-span-2 p-10"
-            style={{ backgroundColor: "#c83db6" }}
+            className="rounded-2xl border-2 relative grid-flow-dense col-span-2 row-span-2 overflow-hidden"
           >
-            <h3 className="text-3xl font-semibold">Skills</h3>
-            <ul className="mt-8 space-y-4 text-xl">
-              <li>Frontend Development</li>
-              <li>Backend Architecture</li>
-              <li>UI/UX Design</li>
-              <li>Cloud Services</li>
-            </ul>
+            <IconCloudDemo />
           </div>
 
           <div
@@ -90,8 +84,8 @@ export default function Home() {
               Contact Me
             </button>
           </div>
-        </main>
-      </section>
+        </section>
+      </main>
     </div>
   );
 }

@@ -1,11 +1,12 @@
 import { IconCloudCard } from "@/components/IconCloud";
 import Image from "next/image";
+import { IconCloudDemo } from "@/components/TecnologiesIconCloud";
 
 export default function Home() {
   return (
     <div className="flex flex-col w-full">
-      <section className="h-screen p-8">
-        <main className="grid grid-cols-6 gap-8 max-w-[1920px] w-full mx-auto h-full">
+      <main className="h-screen p-8">
+        <section className="grid grid-cols-6 gap-8 max-w-[1920px] w-full mx-auto h-full">
           <div
             className="rounded-2xl border-2 relative grid-flow-dense col-span-2 row-span-1 p-10 
             flex items-center justify-center"
@@ -34,8 +35,9 @@ export default function Home() {
           </div>
 
           <div
-            className="rounded-2xl border-2 col-span-2 row-span-2">
-            <IconCloudCard />
+            className="rounded-2xl border-2 relative grid-flow-dense col-span-2 row-span-2 overflow-hidden"
+          >
+            <IconCloudDemo />
           </div>
 
           <div
@@ -83,8 +85,8 @@ export default function Home() {
               Contact Me
             </button>
           </div>
-        </main>
-      </section>
+        </section>
+      </main>
     </div>
   );
 }

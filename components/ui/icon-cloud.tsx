@@ -261,10 +261,8 @@ export function IconCloud({ icons, images }: IconCloudProps) {
         const rotatedZ = icon.x * sinY + icon.z * cosY;
         const rotatedY = icon.y * cosX + rotatedZ * sinX;
 
-        // Modificamos la escala mínima aumentando el valor base y ajustando el divisor
-        const scale = (rotatedZ + 350) / 450; // Aumentamos el offset de 300 a 350
-        // Ajustamos la opacidad para que los iconos posteriores sean más visibles
-        const opacity = Math.max(0.4, Math.min(1, (rotatedZ + 225) / 300)); // Aumentamos la opacidad mínima de 0.2 a 0.4
+        const scale = (rotatedZ + 200) / 300;
+        const opacity = Math.max(0.2, Math.min(1, (rotatedZ + 150) / 200));
 
         ctx.save();
         ctx.translate(

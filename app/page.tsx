@@ -1,3 +1,4 @@
+import { IconCloudCard } from "@/components/IconCloud";
 import Image from "next/image";
 
 export default function Home() {
@@ -33,16 +34,8 @@ export default function Home() {
           </div>
 
           <div
-            className="rounded-2xl border-2 relative grid-flow-dense col-span-2 row-span-2 p-10"
-            style={{ backgroundColor: "#c83db6" }}
-          >
-            <h3 className="text-3xl font-semibold">Skills</h3>
-            <ul className="mt-8 space-y-4 text-xl">
-              <li>Frontend Development</li>
-              <li>Backend Architecture</li>
-              <li>UI/UX Design</li>
-              <li>Cloud Services</li>
-            </ul>
+            className="rounded-2xl border-2 col-span-2 row-span-2">
+            <IconCloudCard />
           </div>
 
           <div

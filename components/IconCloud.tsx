@@ -1,4 +1,4 @@
-import IconCloud from "@/components/magicui/icon-cloud";
+import { IconCloud } from "./magicui/icon-cloud";
 
 const slugs = [
   "typescript",
@@ -40,9 +40,13 @@ const slugs = [
 ];
 
 export function IconCloudHero() {
+  const images = slugs.map(
+    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`,
+  );
+ 
   return (
-    <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-lg border bg-background p-4">
-      <IconCloud iconSlugs={slugs} />
+    <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg border bg-background">
+      <IconCloud images={images} />
     </div>
   );
 }

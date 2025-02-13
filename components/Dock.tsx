@@ -10,7 +10,6 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Dock, DockIcon } from "@/components/magicui/dock";
-import { ModeToggle } from "@/components/ui/mode-toggle";
 import { dockDatas } from "@/data/dockData"; // Asegúrate de ajustar la ruta según tu estructura de proyecto
 
 export function DockDemo() {
@@ -64,17 +63,6 @@ export function DockDemo() {
             </Tooltip>
           </DockIcon>
         ))}
-        <Separator orientation="vertical" className="h-full py-2" />
-        <DockIcon>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <ModeToggle className="rounded-full" />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Theme</p>
-            </TooltipContent>
-          </Tooltip>
-        </DockIcon>
       </Dock>
     </TooltipProvider>
   );

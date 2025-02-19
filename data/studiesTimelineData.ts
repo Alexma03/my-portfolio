@@ -25,7 +25,7 @@ export const studies: Study[] = [
     completed: false,
     description:
       "Desarrollo de software, arquitectura de software, diseño de interfaces, bases de datos y sistemas operativos.",
-    skills: ["Computadores", "Cloud Computing", "Serverless", "DevOps"],
+    skills: ["Computadores", "Matematicas"],
   },
   {
     id: 2,
@@ -52,6 +52,6 @@ export const studies: Study[] = [
     completed: true,
     description:
       "Aplicaciones backend, aplicaciones móviles, bases de datos, srypts de python",
-    skills: ["Java", "SQL", "MongoDB", "Android", "Python", "Linux"],
+    skills: ["Java", "SQL", "MongoDB", "Android"],
   },
 ];

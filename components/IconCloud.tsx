@@ -45,11 +45,8 @@ export function IconCloudHero() {
   );
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full p-4 gap-4 bg-white bg-opacity-10 shadow-2xl rounded-lg backdrop-blur-md">
-      <p className="text-4xl font-bold text-white">My Skills</p>
-      <div className="relative flex size-full items-center justify-center overflow-hidden rounded-lg border bg-[#1F1F1F]">
-        <IconCloud images={images} />
-      </div>
+    <div className="relative flex size-full items-center justify-center overflow-hidden rounded-lg border bg-[#131313]">
+      <IconCloud images={images} />
     </div>
   );
 }

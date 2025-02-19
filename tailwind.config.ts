@@ -114,6 +114,7 @@ const config = {
       },
       screens: {
         'short-laptop': { 'raw': '(min-width: 1279px) and (max-height: 1100px)' },
+        'wide-screen': { 'raw': '(min-width: 1900px)' }
       }
     },
   },

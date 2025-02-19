@@ -98,6 +98,12 @@ export function IconCloud({ icons, images }: IconCloudProps) {
     const items = icons || images || [];
     const newIcons: Icon[] = [];
     const numIcons = items.length || 20;
+    
+    // Determinar el radio de la esfera según el tamaño de pantalla
+    let sphereRadius = 120;
+    if (typeof window !== "undefined" && window.matchMedia("(min-width: 1900px)").matches) {
+      sphereRadius = 170; // Aumenta el radio en pantallas wide-screen
+    }
 
     // Fibonacci sphere parameters
     const offset = 2 / numIcons;
@@ -112,9 +118,9 @@ export function IconCloud({ icons, images }: IconCloudProps) {
       const z = Math.sin(phi) * r;
 
       newIcons.push({
-        x: x * 120,
-        y: y * 120,
-        z: z * 120,
+        x: x * sphereRadius,
+        y: y * sphereRadius,
+        z: z * sphereRadius,
         scale: 1,
         opacity: 1,
         id: i,
@@ -268,7 +274,9 @@ export function IconCloud({ icons, images }: IconCloudProps) {
           canvas.width / 2 + rotatedX,
           canvas.height / 2 + rotatedY,
         );
-        ctx.scale(scale, scale);
+        // Aseguramos un tamaño mínimo mayor cuando el icono es pequeño
+        const finalScale = Math.max(scale, 0.5);
+        ctx.scale(finalScale, finalScale);
         ctx.globalAlpha = opacity;
 
         if (icons || images) {

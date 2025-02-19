@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function WorkExperienceTimeline() {
   return (
-    <div className="h-full w-full rounded-lg p-7 bg-white bg-opacity-10 flex items-center justify-center 2xl:px-10">
-      <div className="flex flex-col items-center justify-center gap-7 max-w-3xl size-full">
+    <div className="h-full w-full rounded-lg p-8 bg-white bg-opacity-10 flex items-center justify-center 2xl:py-14 short-laptop:p-6">
+      <div className="flex flex-col items-center justify-center gap-7 max-w-3xl size-full short-laptop:gap-5 2xl:gap-10">
         {workExperienceItems.map((work, index) => (
           <div key={index} className="w-full">
             <div className="flex flex-col">
@@ -20,19 +20,19 @@ export default function WorkExperienceTimeline() {
                     />
                   </div>
                 </div>
-                <h3 className="text-left flex items-center pl-4 wide-screen:text-3xl text-xl 2xl:text-2xl xl:text-lg text-gray-900 dark:text-white font-medium">
+                <h3 className="text-left flex items-center pl-4 wide-screen:text-3xl text-xl 2xl:text-xl xl:text-lg text-white font-medium">
                   {work.company}
                 </h3>
               </div>
               <div className="text-left flex flex-col short-laptop:flex-row short-laptop:items-center short-laptop:gap-4">
-                <p className="py-1 font-semibold text-sm md:text-lg lg:text-lg xl:text-base 2xl:text-lg wide-screen:text-2xl text-gray-700 dark:text-gray-300">
+                <p className="py-1 font-semibold text-sm md:text-lg lg:text-lg xl:text-base 2xl:text-lg wide-screen:text-2xl text-gray-300">
                   {work.position}
                 </p>
-                <span className="dark:text-slate-200 text-[11px] md:text-sm lg:text-sm xl:text-[11px] wide-screen:text-base">
+                <span className="text-slate-200 text-[11px] md:text-sm lg:text-sm xl:text-[11px] wide-screen:text-base">
                   {work.startDate} - {work.endDate || "Presente"}
                 </span>
               </div>
-              <p className="text-[12px] md:text-sm lg:text-sm xl:text-[14px] text-gray-600 dark:text-gray-400 text-left wide-screen:text-base mt-2">
+              <p className="text-[12px] md:text-sm lg:text-sm xl:text-[14px] 2xl:text-sm 2xl:mt-1 text-gray-400 text-left wide-screen:text-base mt-2">
                 {work.description}
               </p>
               <div className="flex flex-wrap gap-1.5 mt-3">
@@ -40,7 +40,7 @@ export default function WorkExperienceTimeline() {
                   <Badge
                     key={index}
                     color="gray"
-                    className="text-[10px] md:text-xs lg:text-xs xl:text-[11px] text-gray-700 dark:text-gray-200 dark:bg-gray-700"
+                    className="text-[10px] md:text-xs lg:text-xs xl:text-[11px] text-gray-200 bg-gray-700"
                   >
                     {tech}
                   </Badge>

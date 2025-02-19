@@ -29,10 +29,10 @@ export const studies: Study[] = [
   },
   {
     id: 2,
-    title: "Desarrollo de Aplicaciones Web Especialización Blockchain",
+    title: "Desarrollo de Aplicaciones Web con Blockchain",
     img: "/images/cesur.png",
     height: 50,
-    width: 150,
+    width: 125,
     institution: "Cesur Formación",
     year: "2024 - 2025",
     type: "Grado Superior",
@@ -45,7 +45,7 @@ export const studies: Study[] = [
     title: "Desarrollo de Aplicaciones Multiplataforma (Dual)",
     img: "/images/cesur.png",
     height: 50,
-    width: 150,
+    width: 125,
     institution: "Cesur Formación",
     year: "2022 - 2024",
     type: "Grado Superior",
@@ -55,3 +55,15 @@ export const studies: Study[] = [
     skills: ["Java", "SQL", "MongoDB", "Android"],
   },
 ];
+
+// Actualizamos la función para tomar la anchura de pantalla como parámetro
+export function getStudies(screenWidth: number) {
+  return studies.map(study => {
+    let multiplier = screenWidth > 1600 ? 1.5 : 1;
+    // Para el primer estudio usar un crecimiento menor
+    if (study.id === 1 && screenWidth > 1600) {
+      multiplier = 1.2;
+    }
+    return { ...study, width: study.width * multiplier };
+  });
+}

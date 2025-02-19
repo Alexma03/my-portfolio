@@ -1,12 +1,28 @@
 import { Badge } from "flowbite-react";
-import { studies } from "@/data/studiesTimelineData";
+import { getStudies } from "@/data/studiesTimelineData"; // actualizamos la importación
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function StudiesTimeline() {
+  const [screenWidth, setScreenWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
+  const [studiesData, setStudiesData] = useState(getStudies(screenWidth));
+
+  useEffect(() => {
+    const handleResize = () => setScreenWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    setStudiesData(getStudies(screenWidth));
+  }, [screenWidth]);
+
   return (
-    <div className="h-full w-full rounded-lg px-5 py-6 sm:px-8 sm:py-10 bg-white bg-opacity-10 flex items-center justify-center">
+    <div className="h-full w-full rounded-lg p-8 sm:px-8 sm:py-10 bg-white bg-opacity-10 flex items-center justify-center">
       <div className="flex flex-col sm:flex-row items-center gap-5 xl:justify-between lg:justify-center md:justify-center max-w-6xl w-full h-full">
-        {studies.map((study) => (
+        {studiesData.map((study) => (
           <div key={study.id} className="w-full">
             <div className="flex flex-col">
               <div className="flex flex-row mb-4 items-center justify-center">
@@ -20,14 +36,14 @@ export default function StudiesTimeline() {
                   />
                 </div>
               </div>
-              <h3 className="text-left text-base md:text-xl lg:text-xl xl:text-lg short-laptop:text-sm text-gray-900 dark:text-white font-medium">
+              <h3 className="text-left text-lg text-white font-medium 2xl:pr-8 xl:pr-8 short-laptop:pr-4 short-laptop:text-lg wide-screen:text-2xl">
                 {study.title}
               </h3>
-              <span className="dark:text-slate-200 mt-2 text-left text-[10px] md:text-sm lg:text-sm xl:text-[10px] short-laptop:text-[10px]">
+              <span className="text-slate-200 mt-2 text-left text-[13px] wide-screen:text-md">
                 {study.year}
               </span>
               <div className="text-left">
-                <p className="py-1 font-semibold text-sm text-gray-700 dark:text-gray-300 short-laptop:text-xs">
+                <p className="py-1 font-semibold text-sm text-gray-300 wide-screen:text-lg">
                   {study.institution}
                 </p>
                 <div className="flex flex-wrap gap-1.5 mt-2">
@@ -35,7 +51,7 @@ export default function StudiesTimeline() {
                     <Badge
                       key={index}
                       color="gray"
-                      className="text-[11px] md:text-xs lg:text-xs xl:text-[11px] short-laptop:text-[11px] text-gray-700 dark:text-gray-200 dark:bg-gray-700" 
+                      className="text-[11px] md:text-xs lg:text-xs xl:text-[11px] short-laptop:text-[11px] text-gray-200 bg-gray-700 wide-screen:text-sm" 
                     >
                       {skill}
                     </Badge>

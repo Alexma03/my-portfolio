@@ -6,16 +6,16 @@ import { Input } from "@/components/ui/input";
 export default function ContactCard() {
   return (
     <Card className="overflow-hidden h-full w-full">
-      <CardContent className="p-0 h-full">
-        <div className="flex flex-col items-center align-middle h-full py-2 px-3 short-laptop:flex-row">
+      <CardContent className="p-0 h-full flex items-center justify-center">
+        <div className="flex flex-col items-center justify-center align-middle h-full py-2 px-3 short-laptop:flex-row">
           <div className="flex flex-col items-center">
             <div className="p-2 m-1 bg-primary/10 rounded-full">
               <MailIcon className="h-8 w-8 text-primary text-center" />
             </div>
             <div>
               <h3 className="text-lg font-semibold">Contáctame</h3>
-              <p className="text-sm text-muted-foreground m-2">
-                ¿Tienes un proyecto en mente? Deja tu correo y hablemos
+              <p className="text-base text-muted-foreground m-2">
+                ¿Tienes un proyecto en mente? Deja tu correo y hablemos.
               </p>
             </div>
           </div>

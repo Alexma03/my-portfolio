@@ -16,6 +16,7 @@ export default function StudiesTimeline() {
   }, []);
 
   useEffect(() => {
+    console.log('Screen width changed:', screenWidth);
     setStudiesData(getStudies(screenWidth));
   }, [screenWidth]);
 

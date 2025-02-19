@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function WorkExperienceTimeline() {
   return (
-    <div className="h-full w-full rounded-lg p-8 bg-white bg-opacity-10 flex items-center justify-center 2xl:py-14 short-laptop:p-6">
+    <div className="h-full w-full rounded-lg p-8 bg-white bg-opacity-10 flex items-center justify-center 2xl:py-14 short-laptop:p-6 wide-screen:p-16">
       <div className="flex flex-col items-center justify-center gap-7 max-w-3xl size-full short-laptop:gap-5 2xl:gap-10">
         {workExperienceItems.map((work, index) => (
           <div key={index} className="w-full">
@@ -20,12 +20,12 @@ export default function WorkExperienceTimeline() {
                     />
                   </div>
                 </div>
-                <h3 className="text-left flex items-center pl-4 wide-screen:text-3xl text-xl 2xl:text-xl xl:text-lg text-white font-medium">
+                <h3 className="text-left flex items-center pl-4 wide-screen:text-2xl text-xl 2xl:text-xl xl:text-lg text-white font-medium">
                   {work.company}
                 </h3>
               </div>
               <div className="text-left flex flex-col short-laptop:flex-row short-laptop:items-center short-laptop:gap-4">
-                <p className="py-1 font-semibold text-sm md:text-lg lg:text-lg xl:text-base 2xl:text-lg wide-screen:text-2xl text-gray-300">
+                <p className="py-1 font-semibold text-sm md:text-lg lg:text-lg xl:text-base 2xl:text-lg wide-screen:text-lg text-gray-300">
                   {work.position}
                 </p>
                 <span className="text-slate-200 text-[11px] md:text-sm lg:text-sm xl:text-[11px] wide-screen:text-base">

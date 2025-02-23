@@ -73,7 +73,7 @@ export interface DockData {
 
 export const dockDatas: DockData = {
   navbar: [
-    { href: "#", icon: HomeIcon, label: "Home", imgSource: "/images/Portfolio-Landing.png" },
+    { href: "#", icon: HomeIcon, label: "Home", imgSource: "/images/Portfolio.png" },
   ],
   contact: {
     social: {
@@ -86,7 +86,7 @@ export const dockDatas: DockData = {
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/alejandro-marcos-garcia/",
-        imgSource: "/images/Linkedin-Profile.png",
+        imgSource: "/images/Linkedin.png",
         icon: Icons.linkedin,
       }
     },

@@ -20,38 +20,40 @@ export default function StudiesTimeline() {
   }, [screenWidth]);
 
   return (
-    <div className="h-full w-full rounded-lg p-8 sm:px-8 sm:py-10 bg-white bg-opacity-10 flex items-center justify-center">
-      <div className="flex flex-col sm:flex-row items-center gap-5 xl:justify-between lg:justify-center md:justify-center max-w-6xl w-full h-full">
+    <div className="h-full w-full rounded-lg p-6 bg-white bg-opacity-10 flex items-center justify-center">
+      <div className="flex flex-col sm:flex-row items-stretch gap-6 xl:justify-between lg:justify-center md:justify-center max-w-6xl size-full">
         {studiesData.map((study) => (
-          <div key={study.id} className="w-full">
-            <div className="flex flex-col">
-              <div className="flex flex-row mb-4 items-center justify-center">
-                <div className="relative w-full">
+          <div key={study.id} className="size-full sm:w-1/3 flex flex-col">
+            <div className="flex flex-col justify-between h-full bg-white/5 rounded-lg p-6">
+              <div className="flex flex-row items-center gap-4">
+                <div className="w-16 h-16 relative flex-shrink-0">
                   <Image
                     src={study.img}
                     alt={study.title}
-                    width={study.width}
-                    height={study.height}
-                    className="object-contain rounded-md filter drop-shadow-xl" 
+                    fill
+                    className="object-contain rounded-lg filter drop-shadow-xl"
                   />
                 </div>
+                <h3 className="text-left text-base text-white font-medium">
+                  {study.title}
+                </h3>
               </div>
-              <h3 className="text-left text-lg text-white font-medium 2xl:pr-8 xl:pr-8 short-laptop:pr-4 short-laptop:text-lg wide-screen:text-2xl">
-                {study.title}
-              </h3>
-              <span className="text-slate-200 mt-2 text-left text-[13px] wide-screen:text-md">
-                {study.year}
-              </span>
               <div className="text-left">
-                <p className="py-1 font-semibold text-sm text-gray-300 wide-screen:text-lg">
-                  {study.institution}
-                </p>
+                <div className="flex items-center gap-2">
+                  <span className="text-slate-200 text-xs wide-screen:text-md">
+                    {study.year}
+                  </span>
+                  <span className="text-gray-400">•</span>
+                  <p className="font-semibold text-xs text-gray-300 wide-screen:text-lg">
+                    {study.institution}
+                  </p>
+                </div>
                 <div className="flex flex-wrap gap-1.5 mt-2">
                   {study.skills.map((skill, index) => (
                     <Badge
                       key={index}
                       color="gray"
-                      className="text-[11px] md:text-xs lg:text-xs xl:text-[11px] short-laptop:text-[11px] text-gray-200 bg-gray-700 wide-screen:text-sm" 
+                      className="text-[11px] md:text-xs lg:text-xs xl:text-[11px] short-laptop:text-[11px] text-gray-200 bg-gray-700 wide-screen:text-sm"
                     >
                       {skill}
                     </Badge>

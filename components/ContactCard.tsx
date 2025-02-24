@@ -46,10 +46,10 @@ export default function ContactCard() {
   return (
     <Card className="overflow-hidden h-full w-full">
       <CardContent className="p-0 h-full flex items-center justify-center">
-        <div className="flex flex-col items-center justify-center h-full w-full py-2 px-3 short-laptop:flex-row">
-          <div className="flex flex-col items-center">
-            <div className="p-2 mb-3 bg-primary/10 rounded-full">
-              <MailIcon className="h-8 w-8 text-primary text-center" />
+        <div className="flex flex-col items-center justify-center h-full w-full py-4 px-6 short-laptop:flex-row short-laptop:gap-6">
+          <div className="flex flex-col items-center mb-4 short-laptop:mb-0">
+            <div className="p-3 bg-primary/10 rounded-full">
+              <MailIcon className="h-6 w-6 text-primary text-center" />
             </div>
           </div>
           <div className="w-full max-w-md">
@@ -63,8 +63,9 @@ export default function ContactCard() {
                   transition={{ duration: 0.3 }}
                   className="flex flex-col gap-4 items-center"
                 >
-                  <p className="text-base text-muted-foreground m-2">
-                    ¿Quieres contactar conmingo? <br /> Déjame tu correo y te responderé lo antes posible.
+                  <p className="text-base text-muted-foreground text-center short-laptop:text-left w-full">
+                    ¿Quieres contactar conmigo? <br /> 
+                    Déjame tu correo y te responderé lo antes posible.
                   </p>
                   <div className="flex flex-row gap-4 w-full">
                     <Input
@@ -100,7 +101,7 @@ export default function ContactCard() {
                   transition={{ duration: 0.3 }}
                   className="flex flex-col gap-4 items-center"
                 >
-                  <p className="text-base text-muted-foreground">
+                  <p className="text-base text-muted-foreground text-center short-laptop:text-left w-full">
                     Correo de contacto: <strong>{email}</strong>
                   </p>
                   <Textarea
@@ -138,7 +139,7 @@ export default function ContactCard() {
                   transition={{ duration: 0.3 }}
                   className="flex flex-col gap-4 items-center"
                 >
-                  <p className="text-sm mb-2">
+                  <p className="text-base text-muted-foreground text-center short-laptop:text-left w-full">
                     Mensaje enviado por: <strong>{email}</strong>
                   </p>
                   <p className="text-base mb-4">{mensaje}</p>

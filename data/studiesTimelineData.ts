@@ -16,11 +16,11 @@ export const studies: Study[] = [
   {
     id: 1,
     title: "Ingeniería Informática",
-    img: "/images/uoc.png",
+    img: "/images/uoc-2.png",
     height: 90,
     width: 90,
     institution: "Universidad Oberta de Catalunya",
-    year: "2024 - Presente",
+    year: "2024",
     type: "Carrera",
     completed: false,
     description:
@@ -30,9 +30,9 @@ export const studies: Study[] = [
   {
     id: 2,
     title: "Desarrollo de Aplicaciones Web con Blockchain",
-    img: "/images/cesur.png",
+    img: "/images/cesur-2.png",
     height: 50,
-    width: 125,
+    width: 90,
     institution: "Cesur Formación",
     year: "2024 - 2025",
     type: "Grado Superior",
@@ -43,9 +43,9 @@ export const studies: Study[] = [
   {
     id: 3,
     title: "Desarrollo de Aplicaciones Multiplataforma (Dual)",
-    img: "/images/cesur.png",
+    img: "/images/cesur-2.png",
     height: 50,
-    width: 125,
+    width: 90,
     institution: "Cesur Formación",
     year: "2022 - 2024",
     type: "Grado Superior",

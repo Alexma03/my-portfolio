@@ -23,7 +23,7 @@ export interface WorkExperienceItem {
       height: 50,
       width: 60,
       description:
-        "Lideré el desarrollo de aplicaciones web escalables y participé en la arquitectura de microservicios.",
+        "Lideré el desarrollo de aplicaciones web escalables utilizando arquitecturas de microservicios. Implementé soluciones robustas con Spring Boot y Java, optimizando el rendimiento y la seguridad de las aplicaciones bancarias. Colaboré en la definición de estándares de desarrollo y mejores prácticas del equipo.",
     },
     {
       company: "Carrefour Tech",
@@ -36,6 +36,6 @@ export interface WorkExperienceItem {
       height: 50,
       width: 65,
       description:
-        "Desarrollé y mantuve aplicaciones web full-stack para clientes en diversos sectores.",
+        "Desarrollé y mantuve aplicaciones web full-stack para diversos sectores comerciales. Implementé nuevas funcionalidades utilizando Angular en el frontend y Spring Boot en el backend. Gestioné bases de datos MongoDB y PostgreSQL, optimizando consultas y mejorando el rendimiento de las aplicaciones.",
     },
   ];

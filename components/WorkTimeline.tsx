@@ -4,47 +4,58 @@ import Image from "next/image";
 
 export default function WorkExperienceTimeline() {
   return (
-    <div className="h-full w-full rounded-lg p-8 bg-white bg-opacity-10 flex items-center justify-center 2xl:py-14 short-laptop:p-6 wide-screen:p-16">
-      <div className="flex flex-col items-center justify-center gap-7 max-w-3xl size-full short-laptop:gap-5 2xl:gap-10">
+    <div className="size-full rounded-lg p-8 bg-white bg-opacity-10">
+        <div className="flex flex-col gap-6 size-full justify-center items-center">
         {workExperienceItems.map((work, index) => (
-          <div key={index} className="w-full">
-            <div className="flex flex-col">
-              <div className="flex flex-row mb-2 items-center">
-                <div className="flex items-center">
-                  <div className="relative w-8 h-8 md:w-10 md:h-10 lg:w-10 lg:h-10 xl:w-8 xl:h-8 wide-screen:h-12 wide-screen:w-12">
+          <div key={index} className="size-full">
+            <div className="flex flex-col h-full justify-center items-center bg-white/5 rounded-lg p-6
+              transition-all duration-300 ease-in-out hover:bg-white/10 hover:scale-[1.02] hover:shadow-lg 
+              cursor-pointer group">
+              <div className="flex flex-col gap-2">
+                <div className="flex flex-row items-center gap-4">
+                  <div className="size-12 relative flex-shrink-0
+                    transition-transform duration-300 group-hover:scale-105">
                     <Image
-                      fill
                       src={work.logo}
                       alt={work.company}
-                      className="object-contain rounded-md filter drop-shadow-xl"
+                      fill
+                      className="object-contain rounded-lg filter drop-shadow-xl"
                     />
                   </div>
+                  <h3 className="text-left text-xl text-white font-medium 
+                    transition-colors duration-300 group-hover:text-blue-400">
+                    {work.company}
+                  </h3>
                 </div>
-                <h3 className="text-left flex items-center pl-4 wide-screen:text-2xl text-xl 2xl:text-xl xl:text-lg text-white font-medium">
-                  {work.company}
-                </h3>
-              </div>
-              <div className="text-left flex flex-col short-laptop:flex-row short-laptop:items-center short-laptop:gap-4">
-                <p className="py-1 font-semibold text-sm md:text-lg lg:text-lg xl:text-base 2xl:text-lg wide-screen:text-lg text-gray-300">
-                  {work.position}
-                </p>
-                <span className="text-slate-200 text-[11px] md:text-sm lg:text-sm xl:text-[11px] wide-screen:text-base">
-                  {work.startDate} - {work.endDate || "Presente"}
-                </span>
-              </div>
-              <p className="text-[12px] md:text-sm lg:text-sm xl:text-[14px] 2xl:text-sm 2xl:mt-1 text-gray-400 text-left wide-screen:text-base mt-2">
-                {work.description}
-              </p>
-              <div className="flex flex-wrap gap-1.5 mt-3">
-                {work.technologies.map((tech, index) => (
-                  <Badge
-                    key={index}
-                    color="gray"
-                    className="text-[10px] md:text-xs lg:text-xs xl:text-[11px] text-gray-200 bg-gray-700"
-                  >
-                    {tech}
-                  </Badge>
-                ))}
+
+                <div className="text-left">
+                  <div className="flex items-center gap-2">
+                    <h2 className="font-bold text-lg text-gray-300
+                      transition-colors duration-300 group-hover:text-gray-200">
+                      {work.position}
+                    </h2>
+                    <span className="text-gray-400">•</span>
+                    <span className="text-slate-200 text-base transition-colors duration-300 group-hover:text-slate-100">
+                      {work.startDate} - {work.endDate || "Presente"}
+                    </span>
+                  </div>
+                  <p className="text-gray-400 text-sm mt-3 line-clamp-3 
+                    transition-colors duration-300 group-hover:text-gray-300">
+                    {work.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {work.technologies.map((tech, index) => (
+                      <Badge
+                        key={index}
+                        color="gray"
+                        className="text-sm text-gray-200 bg-gray-700 
+                          transition-all duration-300 group-hover:bg-gray-600 group-hover:text-white"
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>

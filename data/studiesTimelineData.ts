@@ -24,7 +24,7 @@ export const studies: Study[] = [
     type: "Carrera",
     completed: false,
     description:
-      "Desarrollo de software, arquitectura de software, diseño de interfaces, bases de datos y sistemas operativos.",
+      "Desarrollo de software avanzado, arquitectura de sistemas distribuidos, diseño de interfaces de usuario, gestión de bases de datos relacionales y NoSQL, sistemas operativos y redes. Enfoque en metodologías ágiles y patrones de diseño.",
     skills: ["Computadores", "Matematicas"],
   },
   {
@@ -37,7 +37,8 @@ export const studies: Study[] = [
     year: "2024 - 2025",
     type: "Grado Superior",
     completed: false,
-    description: "Desarrollo y despliegue de aplicaciones web, desarrollo de smart contracts y criptomonedas.",
+    description: 
+      "Desarrollo y despliegue de aplicaciones web modernas, implementación de smart contracts en Ethereum, desarrollo de DApps, integración con Web3 y wallets. Especialización en tecnologías blockchain y criptomonedas con enfoque práctico.",
     skills: ["JavaScript", "React", "Solidity", "Web3"],
   },
   {
@@ -51,7 +52,7 @@ export const studies: Study[] = [
     type: "Grado Superior",
     completed: true,
     description:
-      "Aplicaciones backend, aplicaciones móviles, bases de datos, srypts de python",
+      "Desarrollo de aplicaciones backend con Java y Spring Boot, aplicaciones móviles nativas para Android, gestión de bases de datos SQL y NoSQL, automatización con Python. Experiencia práctica en entorno empresarial mediante formación dual.",
     skills: ["Java", "SQL", "MongoDB", "Android"],
   },
 ];

@@ -9,7 +9,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <section className="min-h-screen md:h-screen">
+      <section className="min-h-screen [@media(min-height:950px)]:md:h-screen">
         <AuroraBackground>
           <div className="relative z-10 bg-opacity-0 p-4 md:p-6 lg:p-8 xl:p-10 h-full">
             <motion.div
@@ -62,7 +62,7 @@ export default function Home() {
         </AuroraBackground>
       </section>
 
-      <section className="min-h-screen md:h-screen bg-black">
+      <section className="min-h-screen [@media(min-height:950px)]:md:h-screen bg-black">
         {/* Nueva sección - Contenido pendiente */}
       </section>
     </main>

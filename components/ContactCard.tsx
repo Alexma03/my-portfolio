@@ -46,8 +46,8 @@ export default function ContactCard() {
   return (
     <Card className="overflow-hidden h-full w-full">
       <CardContent className="p-0 h-full flex items-center justify-center">
-        <div className="flex flex-col items-center justify-center h-full w-full py-4 px-6 short-laptop:flex-row short-laptop:gap-6">
-          <div className="flex flex-col items-center mb-4 short-laptop:mb-0">
+        <div className="flex flex-col items-center justify-center h-full w-full py-4 px-6">
+          <div className="flex flex-col items-center mb-4">
             <div className="p-3 bg-primary/10 rounded-full">
               <MailIcon className="h-6 w-6 text-primary text-center" />
             </div>
@@ -63,7 +63,7 @@ export default function ContactCard() {
                   transition={{ duration: 0.3 }}
                   className="flex flex-col gap-4 items-center"
                 >
-                  <p className="text-base text-muted-foreground text-center short-laptop:text-left w-full">
+                  <p className="text-base text-muted-foreground text-center w-full">
                     ¿Quieres contactar conmigo? <br /> 
                     Déjame tu correo y te responderé lo antes posible.
                   </p>
@@ -101,7 +101,7 @@ export default function ContactCard() {
                   transition={{ duration: 0.3 }}
                   className="flex flex-col gap-4 items-center"
                 >
-                  <p className="text-base text-muted-foreground text-center short-laptop:text-left w-full">
+                  <p className="text-base text-muted-foreground text-center w-full">
                     Correo de contacto: <strong>{email}</strong>
                   </p>
                   <Textarea
@@ -139,7 +139,7 @@ export default function ContactCard() {
                   transition={{ duration: 0.3 }}
                   className="flex flex-col gap-4 items-center"
                 >
-                  <p className="text-base text-muted-foreground text-center short-laptop:text-left w-full">
+                  <p className="text-base text-muted-foreground text-center w-full">
                     Mensaje enviado por: <strong>{email}</strong>
                   </p>
                   <p className="text-base mb-4">{mensaje}</p>

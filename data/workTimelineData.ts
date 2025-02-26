@@ -14,7 +14,7 @@ export interface WorkExperienceItem {
   export const workExperienceItems: WorkExperienceItem[] = [
     {
       company: "Santander Digital Services",
-      position: "Ingeniero de Software Analista",
+      position: "Ingeniero de Software",
       location: "Madrid, España",
       startDate: "Julio 2024",
       endDate: null,

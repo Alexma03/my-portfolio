@@ -24,26 +24,26 @@ export default function CurrentWorkingOn() {
                 objectFit: "cover",
               }}
             />
-            <Badge className="absolute top-2 left-2 bg-yellow-500 text-black short-laptop:text-xs">
+            <Badge className="absolute top-2 left-2 bg-yellow-500 text-black">
               En progreso
             </Badge>
           </div>
-          <div className="flex flex-col justify-between p-6 w-full lg:w-2/3 short-laptop:py-6 short-laptop:px-8 short-laptop:justify-start h-full">
+          <div className="flex flex-col justify-between p-6 w-full lg:w-2/3 h-full">
             <div className="text-start flex-grow">
-              <h3 className="text-2xl font-bold mb-2 short-laptop:text-lg short-laptop:mb-1">{title}</h3>
-              <p className="text-muted-foreground mb-4 dark:text-slate-300 text-slate-800 short-laptop:text-sm short-laptop:mb-2">
+              <h3 className="text-2xl font-bold mb-2">{title}</h3>
+              <p className="text-muted-foreground mb-4 dark:text-slate-300 text-slate-800">
                 {description}
               </p>
-              <div className="flex flex-wrap gap-2 mb-4 short-laptop:mb-2">
+              <div className="flex flex-wrap gap-2 mb-4">
                 {technologies.map((tech) => (
-                  <Badge key={tech} variant="secondary" className="short-laptop:text-xs">
+                  <Badge key={tech} variant="secondary">
                     {tech}
                   </Badge>
                 ))}
               </div>
             </div>
-            <Button className="self-start short-laptop:text-xs short-laptop:py-1 short-laptop:px-2" variant="outline">
-              Ver proyecto <ExternalLink className="ml-2 h-4 w-4 short-laptop:h-3 short-laptop:w-3" />
+            <Button className="self-start" variant="outline">
+              Ver proyecto <ExternalLink className="ml-2 h-4 w-4" />
             </Button>
           </div>
         </div>

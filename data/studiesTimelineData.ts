@@ -39,11 +39,11 @@ export const studies: Study[] = [
     completed: false,
     description: 
       "Desarrollo y despliegue de aplicaciones web modernas, implementación de smart contracts en Ethereum, desarrollo de DApps, integración con Web3 y wallets. Especialización en tecnologías blockchain y criptomonedas con enfoque práctico.",
-    skills: ["JavaScript", "React", "Solidity", "Web3"],
+    skills: ["JavaScript", "React", "Solidity"],
   },
   {
     id: 3,
-    title: "Desarrollo de Aplicaciones Multiplataforma (Dual)",
+    title: "Desarrollo de Aplicaciones Multiplataforma",
     img: "/images/cesur-2.png",
     height: 50,
     width: 90,
@@ -53,7 +53,7 @@ export const studies: Study[] = [
     completed: true,
     description:
       "Desarrollo de aplicaciones backend con Java y Spring Boot, aplicaciones móviles nativas para Android, gestión de bases de datos SQL y NoSQL, automatización con Python. Experiencia práctica en entorno empresarial mediante formación dual.",
-    skills: ["Java", "SQL", "MongoDB", "Android"],
+    skills: ["Java", "SQL", "Android"],
   },
 ];
 

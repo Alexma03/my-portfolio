@@ -9,8 +9,8 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <section className="min-h-screen [@media(min-height:950px)]:md:h-screen">
-        <AuroraBackground>
+      <section className="sm:h-auto xl-short:h-auto xl-tall:h-screen md:h-auto">
+      <AuroraBackground>
           <div className="relative z-10 bg-opacity-0 p-4 md:p-6 lg:p-8 xl:p-10 h-full">
             <motion.div
               initial={{ opacity: 0.0, y: 40 }}
@@ -21,7 +21,7 @@ export default function Home() {
                 ease: "easeInOut",
               }}
               className="
-                relative grid gap-6 max-w-[2000px] mx-auto w-full h-full
+                relative grid gap-6 max-w-[1900px] mx-auto w-full h-full
                 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 md:grid-rows-20 lg:grid-cols-2 xl:grid-cols-12 xl:grid-rows-12
                 2xl:gap-8 border-none overflow-hidden
               "
@@ -62,7 +62,7 @@ export default function Home() {
         </AuroraBackground>
       </section>
 
-      <section className="min-h-screen [@media(min-height:950px)]:md:h-screen bg-black">
+      <section className="min-h-screen md:h-screen bg-black">
         {/* Nueva sección - Contenido pendiente */}
       </section>
     </main>

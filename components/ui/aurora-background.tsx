@@ -28,18 +28,17 @@ export const AuroraBackground = ({
   }, []);
 
   return (
-    <main>
-      <div
-        className={cn(
-          "relative flex flex-col h-full xl:h-[100vh] items-center justify-center bg-zinc-50 dark:bg-zinc-900  text-slate-950 transition-bg",
-          className
-        )}
-        {...props}
-      >
-        <div className="absolute inset-0 overflow-hidden">
-          <div
-            className={cn(
-              `
+    <div
+      className={cn(
+        "relative flex flex-col min-h-screen h-full items-center justify-center bg-zinc-50 dark:bg-zinc-900 text-slate-950 transition-bg",
+        className
+      )}
+      {...props}
+    >
+      <div className="absolute inset-0 overflow-hidden">
+        <div
+          className={cn(
+            `
                 ${
                   !isMobile &&
                   `
@@ -67,6 +66,5 @@ export const AuroraBackground = ({
         </div>
         {children}
       </div>
-    </main>
   );
 };

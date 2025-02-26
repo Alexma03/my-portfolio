@@ -113,8 +113,17 @@ const config = {
         },
       },
       screens: {
-        'short-laptop': { 'raw': '(min-width: 1279px) and (max-height: 1100px)' },
-        'wide-screen': { 'raw': '(min-width: 1900px)' }
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1352px',  // Cambia este valor (ejemplo: 1500px en lugar de 1280px)
+        '2xl': '1536px',
+        // Tus breakpoints personalizados existentes
+        'wide-screen': { 'raw': '(min-width: 1900px)' },
+        'xl-short': { 'raw': '(min-width: 1280px) and (max-height: 1000px)' },
+        'xl-tall': { 'raw': '(min-width: 1280px) and (min-height: 1000px)' },
+        '2xl-short': { 'raw': '(min-width: 1536px) and (max-height: 1000px)' },
+        '2xl-tall': { 'raw': '(min-width: 1536px) and (min-height: 1000px)' }
       }
     },
   },

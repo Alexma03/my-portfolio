@@ -4,19 +4,19 @@ import Image from "next/image";
 
 export default function WorkExperienceTimeline() {
   return (
-    <div className="h-full w-full p-6 bg-white bg-opacity-10 flex items-center justify-center rounded-lg xl:p-5 2xl:p-8">
+    <div className="h-full w-full p-6 bg-white bg-opacity-10 flex items-center justify-center rounded-lg xl:p-5 2xl:p-6">
       <div className="size-full flex flex-col gap-6 w-full max-w-3xl xl:gap-5">
         {workExperienceItems.map((work, index) => (
           <div key={index} className="size-full">
             <div
               className="size-full flex flex-col justify-center items-center bg-white/5 rounded-lg p-4
               transition-all duration-300 ease-in-out hover:bg-white/10 hover:scale-[1.02] hover:shadow-lg 
-              cursor-pointer group 2xl:p-6"
+              cursor-pointer group 2xl:p-6 wide-screen:pt-3"
             >
               <div className="flex flex-col gap-2">
                 <div className="flex flex-row items-center gap-3">
                   <div
-                    className="size-10 relative flex-shrink-0 xl:size-12
+                    className="size-10 relative flex-shrink-0 xl:size-12 wide-screen:size-14
                     transition-transform duration-300 group-hover:scale-105 "
                   >
                     <Image
@@ -47,7 +47,7 @@ export default function WorkExperienceTimeline() {
                   </div>
                   <p
                     className="text-gray-400 text-xs mt-2 line-clamp-3 xl:line-clamp-2 2xl:line-clamp-4 xl-short:line-clamp-3 xl-short:text-sm
-                    transition-colors duration-300 group-hover:text-gray-300 xl-tall:line-clamp-2 xl-tall:text-sm"
+                    transition-colors duration-300 group-hover:text-gray-300 xl-tall:line-clamp-3 xl-tall:text-sm wide-screen:line-clamp-2"
                   >
                     {work.description}
                   </p>

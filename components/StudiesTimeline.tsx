@@ -14,18 +14,18 @@ export default function StudiesTimeline() {
 
   return (
     <div className="h-full w-full rounded-lg p-6 bg-white bg-opacity-10 flex items-center justify-center wide-screen:p-8 xl:p-5 2xl-tall:p-6">
-      <div className="size-full flex flex-col md:flex-row md:gap-4 items-stretch gap-6 wide-screen:gap-8 lg:justify-center md:justify-center w-full xl:gap-5 xl:justify-center">
+      <div className="size-full flex flex-col md:flex-row md:gap-4 items-stretch gap-6 wide-screen:gap-6 lg:justify-center md:justify-center w-full xl:gap-5 xl:justify-center">
         {studiesData.map((study) => (
           <div key={study.id} className="flex-1 flex flex-col min-w-0">
             <div
               className="flex flex-col justify-center h-full bg-white/5 rounded-lg p-6 2xl:p-7 xl-short:p-5 xl-tall:px-4 xl-tall:py-6
               transition-all duration-300 ease-in-out hover:bg-white/10 hover:scale-[1.02] hover:shadow-lg 
-              cursor-pointer group xl:p-4"
+              cursor-pointer group xl:p-4 wide-screen:p-8"
             >
               <div className="flex flex-col gap-4">
                 <div className="flex flex-row items-center gap-4 xl:gap-5">
                   <div
-                    className="size-16 relative flex-shrink-0 xl:size-16 wide-screen:size-20 xl-short:size-20
+                    className="size-16 relative flex-shrink-0 xl:size-16 wide-screen:size-24 xl-short:size-20
                     transition-transform duration-300 group-hover:scale-105 2xl-tall:size-20 xl-tall:size-20"
                   >
                     <Image

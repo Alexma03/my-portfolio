@@ -117,7 +117,7 @@ const config = {
         'sm': '640px',
         'md': '768px',
         'lg': '1024px',
-        'xl': '1280px', // Added standard xl breakpoint
+        'xl': '1282px', // Added standard xl breakpoint
         '2xl': '1536px',
         // Custom breakpoints with refined definitions
         'xl-short': { 'raw': '(min-width: 1280px) and (max-width: 1535px) and (max-height: 1000px)' },

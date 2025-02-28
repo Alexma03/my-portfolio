@@ -113,18 +113,19 @@ const config = {
         },
       },
       screens: {
+        // Standard breakpoints
         'sm': '640px',
         'md': '768px',
         'lg': '1024px',
-        'xl': '1352px',  // Cambia este valor (ejemplo: 1500px en lugar de 1280px)
+        'xl': '1280px', // Added standard xl breakpoint
         '2xl': '1536px',
-        // Tus breakpoints personalizados existentes
-        'wide-screen': { 'raw': '(min-width: 1900px)' },
-        'xl-short': { 'raw': '(min-width: 1280px) and (max-height: 1000px)' },
-        'xl-tall': { 'raw': '(min-width: 1280px) and (min-height: 1000px)' },
-        '2xl-short': { 'raw': '(min-width: 1536px) and (max-height: 1000px)' },
-        '2xl-tall': { 'raw': '(min-width: 1536px) and (min-height: 1000px)' }
-      }
+        // Custom breakpoints with refined definitions
+        'xl-short': { 'raw': '(min-width: 1280px) and (max-width: 1535px) and (max-height: 1000px)' },
+        'xl-tall': { 'raw': '(min-width: 1280px) and (max-width: 1535px) and (min-height: 1000px)' },
+        '2xl-short': { 'raw': '(min-width: 1536px) and (max-width: 2099px) and (max-height: 1000px)' },
+        '2xl-tall': { 'raw': '(min-width: 1536px) and (max-width: 2099px) and (min-height: 1000px)' },
+        'wide-screen': { 'raw': '(min-width: 2100px) and (min-height: 1100px)' },
+      },
     },
   },
   plugins: [require("tailwindcss-animate"), addVariablesForColors, flowbite.plugin()],

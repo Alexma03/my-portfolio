@@ -9,7 +9,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <section className="sm:h-auto xl-short:h-auto xl-tall:h-screen md:h-auto max-h-[1440px]">
+      <section className="sm:h-auto [@media(max-height:1000px)]:xl:h-auto [@media(min-height:1000px)]:xl:h-screen md:h-auto max-h-[1440px]">
         <AuroraBackground>
           <div className="relative z-10 bg-opacity-0 p-4 md:p-6 lg:p-8 xl:p-10 h-full">
             <motion.div

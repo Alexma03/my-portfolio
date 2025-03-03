@@ -61,10 +61,6 @@ export default function Home() {
           </div>
         </AuroraBackground>
       </section>
-
-      <section className="min-h-screen md:h-screen bg-black">
-        {/* Nueva sección - Contenido pendiente */}
-      </section>
     </main>
   );
 }

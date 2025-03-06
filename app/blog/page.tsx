@@ -1,47 +1,48 @@
 "use client";
 
-import { motion } from "framer-motion";
-import React from "react";
+import { useState, useEffect } from 'react'
 import { AuroraBackground } from "@/components/ui/aurora-background";
+import { BlogPostCard } from "@/components/blog/BlogPostCard";
+import { BlogHeader } from "@/components/blog/BlogHeader";
+import { getBlogPosts, BlogPost } from "@/data/blogData";
 
 export default function BlogPage() {
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const data = await getBlogPosts();
+      setPosts(data);
+    };
+    fetchPosts();
+  }, []);
+
   return (
     <main>
       <section className="sm:h-auto [@media(max-height:1000px)]:xl:h-auto [@media(min-height:1000px)]:xl:h-screen md:h-auto [@media(min-height:1600px)]:h-auto">
         <AuroraBackground>
-          <div className="relative z-10 bg-opacity-0 p-4 md:p-6 lg:p-8 xl:p-10 h-full">
-            <motion.div
-              initial={{ opacity: 0.0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.3,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className="
-                relative grid gap-6 max-w-[1900px] mx-auto w-full h-full
-                grid-cols-1 sm:grid-cols-1 md:grid-cols-2 md:grid-rows-20 lg:grid-cols-2 xl:grid-cols-12 xl:grid-rows-12
-                2xl:gap-8 border-none overflow-hidden
-              "
-            >
-              {/* Blog content grid items */}
-              <motion.div
-                className="col-span-12 row-span-12 bg-white bg-opacity-10 shadow-2xl rounded-lg backdrop-blur-md p-6"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                <h1 className="text-4xl font-bold text-white mb-6">Blog</h1>
-                {/* Blog posts grid */}
+          <div className="h-screen flex flex-col overflow-hidden">
+            {/* Fixed header section */}
+            <div className="py-8 px-4 bg-background/95 backdrop-blur-sm sticky top-0 z-10 border-b">
+              <div className="container mx-auto">
+                <BlogHeader
+                  title="My Development Blog"
+                  description="Thoughts, tutorials, and insights about programming and software development"
+                />
+              </div>
+            </div>
+
+            {/* Scrollable content area */}
+            <div className="flex-1 overflow-y-auto">
+              <div className="container mx-auto px-4 py-8">
+                {/* Grid layout for blog posts */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {/* Sample blog post */}
-                  <div className="bg-white bg-opacity-5 rounded-lg p-6 hover:bg-opacity-20 transition-all">
-                    <h2 className="text-xl font-semibold text-white mb-2">Post Title</h2>
-                    <p className="text-gray-300">Blog post excerpt...</p>
-                  </div>
+                  {posts.map((post) => (  // Now this will work with actual data
+                    <BlogPostCard key={post.slug} post={post} />
+                  ))}
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </AuroraBackground>
       </section>

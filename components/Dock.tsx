@@ -10,7 +10,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Dock, DockIcon } from "@/components/magicui/dock";
-import { dockDatas as dockData } from "@/data/dockData"; // Asegúrate de ajustar la ruta según tu estructura de proyecto
+import { dockDatas as dockData } from "@/data/dockData";
 
 export function DockDemo() {
   return (

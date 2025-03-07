@@ -74,7 +74,7 @@ export interface DockData {
 export const dockDatas: DockData = {
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home", imgSource: "/images/Portfolio.png" },
-    { href: "/blog", icon: PencilIcon, label: "Blog", imgSource: "/images/Blog.png" },
+    // { href: "/blog", icon: PencilIcon, label: "Blog", imgSource: "/images/Blog.png" },
   ],
   contact: {
     social: {

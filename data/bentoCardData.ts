@@ -23,7 +23,7 @@ export const cards: Card[] = [
   {
     id: 1,
     component: NameCard,
-    colSpan: 4,
+    colSpan: 3,
     rowSpan: 2,
     mdRowSpan: 1,
     mdColSpan: 1,
@@ -35,13 +35,13 @@ export const cards: Card[] = [
   {
     id: 2,
     image: "/images/Foto-Perfil.jpg",
-    colSpan: 4,
-    rowSpan: 8,
-    mdRowSpan: 2,
+    colSpan: 5,
+    rowSpan: 6,
+    mdRowSpan: 1,
     mdColSpan: 1,
     mdColStart: 2,
     mdRowStart: 1,
-    colStart: 5,
+    colStart: 4,
     rowStart: 1,
   },
   {
@@ -59,7 +59,7 @@ export const cards: Card[] = [
   {
     id: 4,
     component: WorkExperienceTimeline,
-    colSpan: 4,
+    colSpan: 3,
     rowSpan: 6,
     mdRowSpan: 1,
     mdColSpan: 1,

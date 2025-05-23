@@ -9,7 +9,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <section className="sm:h-auto [@media(max-height:1000px)]:xl:h-auto [@media(min-height:1000px)]:xl:h-screen md:h-auto [@media(min-height:1600px)]:h-auto">
+      <section className="h-auto [@media(max-height:1000px)]:xl:h-auto md:h-auto">
         <AuroraBackground>
           <div className="relative z-10 bg-opacity-0 p-4 md:p-6 lg:p-8 xl:p-10 h-full">
             <motion.div
@@ -22,7 +22,7 @@ export default function Home() {
               }}
               className="
                 relative grid gap-6 max-w-[1900px] mx-auto w-full h-full
-                grid-cols-1 sm:grid-cols-1 md:grid-cols-2 md:grid-rows-20 lg:grid-cols-2 xl:grid-cols-12 xl:grid-rows-12
+                grid-cols-1 sm:grid-cols-1 md:grid-cols-2 md:grid-rows-5 lg:grid-cols-2 xl:grid-cols-12 xl:grid-rows-12
                 2xl:gap-8 border-none overflow-hidden
               "
             >
